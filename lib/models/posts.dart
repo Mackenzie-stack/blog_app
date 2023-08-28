@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class PostView extends StatelessWidget {
-  var desc, title, image;
+  var  title, image, desc;
 
-  PostView(String title, String desc, String image) {
-    this.desc = desc;
+  PostView(String title, String image, String desc) {
     this.title = title;
     this.image = image;
+    this.desc = desc;
   }
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,12 @@ class PostView extends StatelessWidget {
                             //check if the image is not null (length > 5) only then check imgUrl else display default img
                             image: new NetworkImage(image.toString().length > 10
                                 ? image.toString()
-                                : "https://pbs.twimg.com/profile_images/916384996092448768/PF1TSFOE_400x400.jpg")),
+                                :"https://blogger.googleusercontent.com/img/b/R29vZ2xl/"
+                                "AVvXsEgFlQKvHKgpMqFXOrISpzrHMIbObF2iumQWufn3BzOkSV05bU0"
+                                "VxFTug285zBAPriJKorw_O5HiZauGifviH4KJiqtv_Znza_unj_Q1CyGb0eN_"
+                                "aLMj5cujOSTetTs066nR4IjBCam3PcsjK-4QwkB2tUwJfDX8h6O9qOTsDfXQhngQLCbeM-"
+                                "4pyzchxw/w640-h360/grow%20your%20business%20with%20your%20persona"
+                                "l%20profile.png")),
                       ),
                     ),
                   ),

@@ -12,7 +12,7 @@ class PostList {
     if (json['items'] != null) {
       posts = <Post>[];
       json['items'].forEach((v) {
-        posts!.add(new Post.fromJson(v));
+        posts!.add(Post.fromJson(v));
       });
     }
   }
