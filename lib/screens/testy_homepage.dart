@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import '../util/constants.dart';
+
 class BlogPost {
   final String title;
   final String content;
@@ -15,8 +17,8 @@ class BlogPostList extends StatefulWidget {
 }
 
 class _BlogPostListState extends State<BlogPostList> {
-  final String apiKey = 'AIzaSyC7ENUcXTLoTO6WpS5RZ0YJHnhEjTNSsQI';
-  final String blogId = '4776826234817506983';
+  final String apiKey = APIKeys.bllogerApiIKey;
+  final String blogId = APIKeys.blogID;
 
   String _nextPageToken ='' ;
   String get getnextPageToken => _nextPageToken;
